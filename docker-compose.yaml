@@ -10,3 +10,4 @@ services:
     restart: always
     ports:
       - 8585:8585
+    privileged: true

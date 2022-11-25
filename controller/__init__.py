@@ -7,6 +7,11 @@ from db import connect, get_user_by_token
 app = FastAPI()
 
 
+@app.get("/ping")
+def ping():
+    return response_data("pong", "pong pong n**ga", status.HTTP_200_OK)
+
+
 @app.post("/{token}/suspend/")
 def suspend_(token: str):
     if not authenticated(token):
