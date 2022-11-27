@@ -1,4 +1,4 @@
-def response_data(data=None, code=None, msg=None):
+def response_data(data=None, msg=None, code=None):
     d = {}
     if data:
         d["data"] = data
